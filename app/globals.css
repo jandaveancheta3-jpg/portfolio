@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ROOT */
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+
+  /* PERFORMANCE */
+  text-rendering:optimizeSpeed;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* MAIN CONTAINER */
+.container{
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:20px;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+  border-radius:50%;
+  border:3px solid white;
+  object-fit:cover;
+
+  /* GPU ACCELERATION */
+  transform:translateZ(0);
+}
+
+/* TEXT */
+.title{
+  margin-top:20px;
+  font-size:2.3rem;
+  font-weight:700;
+}
+
+.subtitle{
+  margin-top:10px;
+  opacity:.8;
+}
+
+.description{
+  margin-top:20px;
+  max-width:650px;
+  line-height:1.7;
+  opacity:.9;
+}
+
+/* BUTTON GRID */
+.button-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+
+  margin-top:30px;
+}
+
+/* BUTTON */
+.nav-btn{
+  background:white;
+  color:black;
+
+  border:none;
+  border-radius:10px;
+
+  padding:12px 18px;
+
+  font-weight:bold;
+  cursor:pointer;
+
+  transition:transform .15s ease;
+
+  /* PERFORMANCE */
+  will-change:transform;
+}
+
+.nav-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* MODAL */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(0,0,0,.65);
+
+  padding:20px;
+
+  z-index:999;
+
+  /* GPU */
+  transform:translateZ(0);
+}
+
+.modal-content{
+  width:100%;
+  max-width:700px;
+  max-height:90vh;
+
+  overflow-y:auto;
+
+  background:#1a1a1a;
+
+  border-radius:18px;
+  border:1px solid #333;
+
+  padding:25px;
+
+  /* LIGHTWEIGHT ANIMATION */
+  animation:fade .18s ease-out;
+}
+
+/* CLOSE BUTTON */
+.close-btn{
+  background:red;
+  color:white;
+
+  border:none;
+  border-radius:8px;
+
+  padding:8px 14px;
+
+  cursor:pointer;
+
+  float:right;
+
+  margin-bottom:15px;
+}
+
+/* CARD */
+.card{
+  background:#202020;
+
+  border:1px solid #2f2f2f;
+  border-radius:14px;
+
+  padding:18px;
+
+  margin-top:15px;
+}
+
+/* FAST ANIMATION */
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:scale(.97);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .title{
+    font-size:2rem;
+  }
+
+  .description{
+    font-size:.95rem;
+  }
+
+  .nav-btn{
+    width:140px;
+  }
+
+}
