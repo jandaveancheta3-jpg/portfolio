@@ -5,7 +5,7 @@ export default function About() {
 
       <div className="card">
         <p>
-          I am Jan Dave N. Ancheta, a BSIT 2nd Year student
+          I am Jan Dave N. Ancheta, a BSIT 4rth Year student
           passionate about web development, cybersecurity,
           motorcycle modification, and cooking.
         </p>

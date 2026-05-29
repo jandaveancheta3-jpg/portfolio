@@ -1,31 +1,26 @@
-export default function Projects() {
+function ProjectsPage() {
   return (
     <div>
-      <h1>Projects</h1>
-
-      <div className="card">
-        <h3>Anti Cybercrime Website</h3>
-        <p>
-          A security awareness platform designed
-          to help prevent online attacks and scams.
-        </p>
+      <h1>My Projects</h1>
+      
+      <div>
+        <h2>Project 1: E-commerce Website</h2>
+        <p>A fully functional online store with cart and payment integration.</p>
+        <p>Technologies: React, Node.js, MongoDB</p>
       </div>
-
-      <div className="card">
-        <h3>Weather Forecast Prediction</h3>
-        <p>
-          A forecasting system for weather analysis
-          and predictions.
-        </p>
+      
+      <div>
+        <h2>Project 2: Task Management App</h2>
+        <p>An app to manage daily tasks and boost productivity.</p>
+        <p>Technologies: Next.js, PostgreSQL, Tailwind CSS</p>
       </div>
-
-      <div className="card">
-        <h3>Automatic Inventory Website</h3>
-        <p>
-          A business inventory management platform
-          with automated tracking features.
-        </p>
+      
+      <div>
+        <h2>Project 3: Weather Dashboard</h2>
+        <p>Real-time weather information with interactive maps.</p>
+        <p>Technologies: JavaScript, API Integration, CSS</p>
       </div>
     </div>
   );
 }
+export default ProjectsPage;
